@@ -20,7 +20,7 @@ export class EntryDataServiceProvider {
 
   constructor(private storage: Storage ) {
 
-    this.loadFakeEntries();
+    // this.loadFakeEntries();
 
     this.clientObservable = Observable.create(observerThatWasCreated => {
       this.serviceObserver = observerThatWasCreated;
@@ -64,7 +64,7 @@ export class EntryDataServiceProvider {
 
   public getEntries():Entry[]{
     let entriesClone = JSON.parse(JSON.stringify(this.entries));
-    
+
     return entriesClone
   }
 

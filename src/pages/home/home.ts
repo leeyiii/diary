@@ -74,8 +74,8 @@ export class HomePage {
         }
       }
       this.entries.sort((a: Entry, b: Entry) => {
-        let aAsDate =
-        a.time.getTime() - b.time.getTime()
+        if (a.time.getTime() > b.time.getTime()) return true;
+          else return false;
       }).reverse();
 
     })
